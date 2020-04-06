@@ -77,13 +77,13 @@
     
     
     //MARK: AppearanceOfElement
-    CGColorRef borderColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2  alpha:1].CGColor;
+    
     CGFloat borderWidth = 1.f;
     CGFloat cornerRadius = 7.f;
     
-    self.textFieldRed.layer.borderColor = borderColor;
-    self.textFieldGreen.layer.borderColor = borderColor;
-    self.textFieldBlue.layer.borderColor = borderColor;
+    self.textFieldRed.layer.borderColor = [UIColor blackColor].CGColor;
+    self.textFieldGreen.layer.borderColor = [UIColor blackColor].CGColor;
+    self.textFieldBlue.layer.borderColor = [UIColor blackColor].CGColor;
     
     self.textFieldRed.layer.cornerRadius = cornerRadius;
     self.textFieldGreen.layer.cornerRadius = cornerRadius;
@@ -93,7 +93,7 @@
     self.textFieldGreen.layer.borderWidth = borderWidth;
     self.textFieldBlue.layer.borderWidth = borderWidth;
     
-    [self.processButton setTitleColor:UIColor.systemBlueColor forState:UIControlStateNormal];
+    [self.processButton setTitleColor:UIColor.blueColor forState:UIControlStateNormal];
     
     self.mainView.translatesAutoresizingMaskIntoConstraints = NO;
     NSArray<UIView*> *labelArray = @[self.resultColorLabel, self.redLabel, self.greenLabel, self.blueLabel];
@@ -204,7 +204,6 @@
             }
         }
     }
-    
     self.resultColorLabel.text = @"Error";
     self.resultColorView.backgroundColor = UIColor.clearColor;
 }
